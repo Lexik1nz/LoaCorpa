@@ -1,0 +1,309 @@
+:root {
+    --bs-blue: #375a7f;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #e83e8c;
+    --bs-red: #e74c3c;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #f39c12;
+    --bs-green: #00bc8c;
+    --bs-teal: #20c997;
+    --bs-cyan: #3498db;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #888;
+    --bs-gray-dark: #303030;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #ebebeb;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #888;
+    --bs-gray-700: #444;
+    --bs-gray-800: #303030;
+    --bs-gray-900: #222;
+    --bs-primary: #375a7f;
+    --bs-secondary: #444;
+    --bs-success: #00bc8c;
+    --bs-info: #3498db;
+    --bs-warning: #f39c12;
+    --bs-danger: #e74c3c;
+    --bs-light: #adb5bd;
+    --bs-dark: #303030;
+    --bs-primary-rgb: 55, 90, 127;
+    --bs-secondary-rgb: 68, 68, 68;
+    --bs-success-rgb: 0, 188, 140;
+    --bs-info-rgb: 52, 152, 219;
+    --bs-warning-rgb: 243, 156, 18;
+    --bs-danger-rgb: 231, 76, 60;
+    --bs-light-rgb: 173, 181, 189;
+    --bs-dark-rgb: 48, 48, 48;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-body-color-rgb: 255, 255, 255;
+    --bs-body-bg-rgb: 34, 34, 34;
+    --bs-font-sans-serif: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg,  rgba(255,  255,  255,  0.15),  rgba(255,  255,  255,  0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #fff;
+    --bs-body-bg: #222;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0,  0,  0,  0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-2xl: 2rem;
+    --bs-border-radius-pill: 50rem;
+    --bs-link-color: #00bc8c;
+    --bs-link-hover-color: #009670;
+    --bs-code-color: #e83e8c;
+    --bs-highlight-bg: #fdebd0;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+@media (prefers-reduced-motion:no-preference) {
+    :root {
+    scroll-behavior: smooth;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.topnavWrapper {
+    margin: 0 auto;
+    width: 50%
+}
+
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: .25;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.h1, h1 {
+    font-size: calc(1.425rem + 2.1vw);
+}
+@media (min-width:1200px) {
+    .h1, h1 {
+    font-size: 3rem;
+}
+}.h2, h2 {
+    font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width:1200px) {
+    .h2, h2 {
+    font-size: 2.5rem;
+}
+}.h3, h3 {
+    font-size: calc(1.325rem + .9vw);
+}
+@media (min-width:1200px) {
+    .h3, h3 {
+    font-size: 2rem;
+}
+}.h4, h4 {
+    font-size: calc(1.275rem + .3vw);
+}
+@media (min-width:1200px) {
+    .h4, h4 {
+    font-size: 1.5rem;
+}
+}.h5, h5 {
+    font-size: 1.25rem;
+}
+.h6, h6 {
+    font-size: 1rem;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.header {
+    background-color: #2c2c2c;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    left: 100;
+    bottom: 0;
+    background-color: Red;
+    height: 100px;
+}
+
+.topnav {
+    background-color: var(--bs-gray-700);
+    overflow: hidden;
+}
+
+.topnav.brand {
+    float: left;
+    text-align: center;
+    padding: .65rem .9rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.topnav a {
+    float: left;
+    color: var(--bs-gray-100);
+    text-align: center;
+    padding: .9rem .9rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.topnav a.split {
+    float: right;
+    background-color: var(--bs-primary);
+}
+
+.topnav a.active {
+    background-color: var(--bs-gray-800);
+    color: white;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+.dropdown .dropbtn {
+    font-size: 1.1rem;  
+    border: none;
+    outline: none;
+    color: var(--bs-gray-100);
+    padding: .9rem .9rem;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+  
+.topnav a:hover, .topnav a.split:hover, .dropdown:hover .dropbtn {
+    border-radius: 3px;
+    background-color: var(--bs-primary);
+}
+
+.topnav a.active:hover{
+    background-color: var(--bs-gray-800);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bs-gray-700);
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: var(--bs-primary);
+    color: white;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+input {
+    height: 1.5rem;
+    border-radius: 5px;
+    border-color: var(--bs-primary);
+    border-style: solid;
+}
+
+
+.column {
+    margin: 0 auto;
+    float: left;
+    padding: 10px;
+    height: 75vh;
+}
+
+.column.side {
+    width: 25%;
+    text-align: center;
+    background-color: var(--bs-gray-500);
+}
+
+.column.middle {
+    width: 50%;
+    vertical-align: center;
+    background-color: var(--bs-gray-600);
+}
+
+@media (max-width: 600px) {
+    .column.side, .column.middle {
+    width: 100%;
+    }
+}
+
+.flex-container {
+    display: flex;
+    background-color: var(--bs-primary);
+    max-height: 100%;
+}
+
+.flex-container > div {
+    /* background-color: var(--bs-gray-300); */
+    margin: 1rem;
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.myImg{
+    border: 5px solid #000000;
+    width: 390px;
+    height: auto;
+}
