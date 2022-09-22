@@ -1,95 +1,121 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Atrophine Profit</title>
-        <link rel="stylesheet", href="custom.css">
-        <link rel="icon" href="./Assets/Atrophine.png">
-    </head>
-    <style>
-        .boldUnderline{
-            font-weight: 800;
-            text-decoration: underline;
-        }
-        .leftLabel{
-            width: 180px;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loa Corpa</title>
+    <link rel="stylesheet" href="custom.css" />
+    <link rel="icon" href="Assets\Corpa.png" />
+  </head>
 
-        .myImg{
-            border: 5px solid #000000;
-        }
+  <body>
+    <script src="scripts.js"></script>
+    <script src="recipeDictionary.js"></script>
+    <div class="header">
+      <img src="Assets\Logo\LoaCorpa-logos_white-skinny.png" />
+    </div>
 
-    </style>
+    <div class="topnav">
+      <div class="topnavWrapper">
+        <div class="topnav brand">LoaCorpa</div>
+        <a href="index.html">Home</a>
+        <!--Battle Item Dropdown-->
+        <div class="dropdown">
+          <button class="dropbtn">Battle Items</button>
+          <div class="dropdown-content">
+            <a class="active" href="atrophine.html">Atrophine</a>
+            <a href="stimulant.html">Stimulant</a>
+          </div>
+        </div>
+        <!--Oreha Fusion Dropdown-->
+        <div class="dropdown">
+          <button class="dropbtn">Oreha Fusion</button>
+          <div class="dropdown-content">
+            <a href="orehaExca.html">Oreha Fusion (excavating)</a>
+            <a href="orehaFishing.html">Oreha Fusion (fishing)</a>
+            <a href="orehaHunting.html">Oreha Fusion (hunting)</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <!--Help Button-->
+        <a href="#" class="split">Help</a>
+      </div>
+    </div>
 
-    <body>
-        <script src="scripts.js"></script>
-        <script src="recipeDictionary.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-            <div class="header">
-                <img src="Assets\Logo\LoaCorpa-logos_white-skinny.png">
-            </div>
+    <div class="wrapper">
+      <div class="column side">
+        <img class="myImg" src="Assets\Art\deathblade.jpg" />
+      </div>
+
+      <div class="column middle">
+        <div class="wrapperBody">
+          <!--Item Header-->
+          <h5 class="boldUnderline">Atrophines (x3)</h5>
+          <!--Ingredient 1-->
+          <img class="itemImage" src="Assets\AtrophineMats\ShyFlower.png">
+          <label class="myLabel">Shy Wild Flower</label>
+          <input type="text" placeholder="0" id="ing1">
+          <!--Total Mat Cost-->
+          <label id="totalMatCost">Total material cost: </label><br>
+          <!--Ingredient 2-->
+          <img class="itemImage" src="Assets\AtrophineMats\BrightWildFlower.png">
+          <label>Bright Wild Flower</label>
+          <input type="text" placeholder="0" id="ing2">
+          <!--Crafting Cost-->
+          <label id="craftingCost">Crafting cost: </label><br>
+          <!--Ingredient 3-->
+          <img class="itemImage" src="Assets\AtrophineMats\WildFlower.png">
+          <label>Wild Flower</label>
+          <input type="text" placeholder="0" id="ing3"><br>
+          <!--Ingredient 4-->
+          <img class="itemImage" src="Assets\AtrophineMats\StrongOre.png">
+          <label>Strong Iron Ore</label>
+          <input type="text" placeholder="0" id="ing4"><br>
+          <!--Ingredient 5-->
+          <img class="itemImage" src="Assets\AtrophineMats\RareRelic.png">
+          <label>Rare Relic</label>
+          <input type="text" placeholder="0" id="ing5"><br>
+          <!--Crafting Reduction-->
+          <img class="itemImage" src="Assets\AtrophineMats\Blank.png">
+          <label class="italicGreen">Crafting Red. (%)</label>
+          <input type="text" placeholder="0" id="craftingReduction">
+          <!--Total Craft Cost-->
+          <label id="totalCraftCost">Total crafting cost: </label><br>
+
+          <!--Auction House-->
+          <h5 class="boldUnderline">Auction House</h5>
+          <!--Sale Price-->
+          <img src="./Assets/AtrophineMats/Blank.png">
+          <label class="myLabel">Sale Price</label>
+          <input type="text" placeholder="0" id="salePrice" ><br>
+          <!--Amount Sold-->
+          <img src="./Assets/AtrophineMats/Blank.png">
+          <label class="myLabel">Amount</label>
+          <label style="padding: 0 0 0 .4rem;" >3</label>
+
+          <!--Total Profit-->
+          <h5 class="boldUnderline">Total Profit</h5>
+          <img src="./Assets/AtrophineMats/Blank.png">
+          <label id="farmedMats">Farmed mats: 0.00</label>
+          <button type="button" id="mybtn" onclick="calculate('Atrophine')">Calculate!</button><br>
+          <img src="./Assets/AtrophineMats/Blank.png">
+          <label id="boughtMats">Bought mats: 0.00</label>
 
 
 
-            <div class="column side">
-                <img src="Assets\Art\deathblade.jpg" class="myImg">
-            </div>
-            <!--  Main calculator section  -->
-            <div class="column middle">
-                <h5 class="boldUnderline">Atrophine Calc (x3)</h5>
-                <img src="./Assets/AtrophineMats/ShyFlower.png">
-                <label class="leftLabel">Shy Wild Flower</label>
-                <input style="width: 40px;" type="text" id="ing1">
-                <label id="totalMatCost" style="width: 235px;">Total material cost: </label><br>
-
-                <img src="./Assets/AtrophineMats/BrightWildFlower.png">
-                <label class="leftLabel">Bright Wild Flower</label>
-                <input style="width: 40px;" type="text" id="ing2">
-                <label id="craftingCost" style="width: 200px;" class="text-danger">Crafting cost: </label><br>
-
-                <img src="./Assets/AtrophineMats/WildFlower.png">
-                <label class="leftLabel">Wild Flower</label>
-                <input style="width: 40px;" type="text" id="ing3"><br>
-
-                <img src="./Assets/AtrophineMats/StrongOre.png">
-                <label class="leftLabel">Strong Iron Ore</label>
-                <input style="width: 40px;" type="text" id="ing4"><br>
-
-                <img src="./Assets/AtrophineMats/RareRelic.png">
-                <label class="leftLabel">Rare Relic</label>
-                <input style="width: 40px;" type="text" id="ing5"><br>
-
-                <img src="./Assets/AtrophineMats/Blank.png">
-                <label class="leftLabel" class="text-success"><i>Crafting Red. (%)</i></label>
-                <input style="width: 40px;" type="text" id="craftingReduction">
-
-                <label id="totalCraftCost" class="boldUnderline" style="width: 235px;">Total crafting cost: </label><br>
 
 
-                <!--  Auction house section  --> 
-                <h5 class="boldUnderline">Auction House</h5>
-                <img src="./Assets/AtrophineMats/Blank.png">
-                <label class="leftLabel">Sale Price</label>
-                <input type="text" id="salePrice" style="width: 40px;"><br>
-
-                <img src="./Assets/AtrophineMats/Blank.png">
-                <label class="leftLabel">Amount</label>
-                <label>3</label>
-
-                <!--  Total profit section  -->
-                <h5 class="boldUnderline">Total Profit</h5>
-                <img src="./Assets/AtrophineMats/Blank.png">
-                <label style="width: 240px"; id="farmedMats">Farmed mats: 0.00</label>
-                <button type="button" id="mybtn" class="btn btn-primary" onclick="calculate('Atrophine')">Calculate!</button><br>
-                <img src="./Assets/AtrophineMats/Blank.png">
-                <label style="width: 240px"; id="boughtMats">Bought mats: 0.00</label>
-            </div>
 
 
-            
-            <div class="column side">
-                <img src="Assets\Art\Scrapper.jpg" width="390.96px" height="552.96 px" class="myImg">
-            </div>
-    </body>
+
+        </div>
+      </div>
+
+      <div class="column side">
+        <img class="myImg" src="Assets\Art\Scrapper.jpg" />
+      </div>
+    </div>
+    <div class="footer">Testing</div>
+  </body>
 </html>

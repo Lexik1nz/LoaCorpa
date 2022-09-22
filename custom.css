@@ -88,13 +88,22 @@ body {
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
     text-align: var(--bs-body-text-align);
-    background-color: var(--bs-body-bg);
+    background-color: var(--bs-gray-600);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
 
 .wrapper {
     margin: 0 auto;
+}
+
+.wrapperBody {
+    margin: 0 auto;
+    background-color: var(--bs-gray-700);
+    padding: .2rem;
+    border: .2rem solid var(--bs-primary);
+    border-radius: .5rem;
+    box-shadow: 0 0 20px var(--bs-gray-900);
 }
 
 .topnavWrapper {
@@ -154,6 +163,30 @@ p {
     margin-bottom: 1rem;
 }
 
+label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 12rem;
+    margin: .25rem;
+}
+
+input[type=text]{
+    vertical-align: middle;
+    border: var(--bs-gray-900) solid 2px;
+    background-color: var(--bs-gray-100);
+    padding: .07rem .5rem 0px .55rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    border-radius: var(--bs-border-radius-sm);
+    width: 3rem;
+}
+
+input:focus {
+    outline: none;
+    vertical-align: middle;
+    border: var(--bs-primary) solid 2px
+}
+
 .header {
     background-color: #2c2c2c;
     text-align: center;
@@ -166,8 +199,7 @@ p {
     width: 100%;
     left: 100;
     bottom: 0;
-    background-color: Red;
-    height: 100px;
+    background-color: var(--bs-gray-700);
 }
 
 .topnav {
@@ -195,6 +227,7 @@ p {
 .topnav a.split {
     float: right;
     background-color: var(--bs-primary);
+    border-radius: 3px;
 }
 
 .topnav a.active {
@@ -263,7 +296,6 @@ input {
     border-style: solid;
 }
 
-
 .column {
     margin: 0 auto;
     float: left;
@@ -274,13 +306,11 @@ input {
 .column.side {
     width: 25%;
     text-align: center;
-    background-color: var(--bs-gray-500);
 }
 
 .column.middle {
     width: 50%;
     vertical-align: center;
-    background-color: var(--bs-gray-600);
 }
 
 @media (max-width: 600px) {
@@ -303,7 +333,29 @@ input {
 }
 
 .myImg{
-    border: 5px solid #000000;
+    border: 5px solid var(--bs-gray-100);
+    border-radius: 7px;
     width: 390px;
     height: auto;
+    box-shadow: 0 0 20px var(--bs-gray-900);
+}
+
+.itemImage {
+    vertical-align: middle;
+}
+
+.leftLabel {
+    display: inline-block;
+    width: 180px;
+    background-color: var(--bs-gray-500);
+}
+
+.boldUnderline {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.italicGreen {
+    font-style: italic;
+    color: var(--bs-success);
 }
