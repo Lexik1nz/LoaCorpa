@@ -175,7 +175,6 @@ label {
 }
 
 
-
 input[type=text]{
     vertical-align: middle;
     border: var(--bs-gray-900) solid 2px;
@@ -191,6 +190,28 @@ input:focus {
     outline: none;
     vertical-align: middle;
     border: var(--bs-primary) solid 2px
+}
+
+.button {
+    width: 8rem;
+    height: 2.3rem;
+    border: 2px solid var(--bs-primary);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--bs-gray-100);
+    padding: 0 0 .25rem 0;
+    background-color: var(--bs-primary);
+}
+
+.button:hover {
+    /* background-color: var(--bs-gray-800); */
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: var(--bs-gray-900);
 }
 
 .header {
