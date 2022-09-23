@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <script src="scripts.js"></script>
+    <script src="recipeDictionary.js"></script>
     <div class="header">
       <img src="Assets\Logo\LoaCorpa-logos_white-skinny.png" />
     </div>
@@ -47,8 +49,58 @@
       </div>
 
       <div class="column middle">
-        <div class="wrapper">
-            Stimulant
+        <div class="wrapperBody">
+          <!--Item Header-->
+          <h5 class="boldUnderline">Stimulants (x3)</h5>
+          <!--Ingredient 1-->
+          <img class="itemImage" src="Assets\Ingredients\ExquisiteMushroom.png">
+          <label>Exquisite Mushroom</label>
+          <input type="text" placeholder="0" id="ing1">
+          <!--Total Mat Cost-->
+          <label id="totalMatCost">Total material cost: </label><br>
+          <!--Ingredient 2-->
+          <img class="itemImage" src="Assets\Ingredients\FreshMushroom.png">
+          <label>Fresh Mushroom</label>
+          <input type="text" placeholder="0" id="ing2">
+          <!--Crafting Cost-->
+          <label id="craftingCost" class="text-danger">Crafting cost: </label><br>
+          <!--Ingredient 3-->
+          <img class="itemImage" src="Assets\Ingredients\SturdyTimber.png">
+          <label>Sturdy Timber</label>
+          <input type="text" placeholder="0" id="ing3"><br>
+          <!--Ingredient 4-->
+          <img class="itemImage" src="Assets\Ingredients\RareRelic.png">
+          <label>Rare Relic</label>
+          <input type="text" placeholder="0" id="ing4"><br>
+          <!--Ingredient 5-->
+          <img class="itemImage" src="Assets\Ingredients\CrudeMushroom.png">
+          <label>Crude Mushroom</label>
+          <input type="text" placeholder="0" id="ing5"><br>
+          <!--Crafting Reduction-->
+          <img class="itemImage" src="Assets\Ingredients\Blank.png">
+          <label class="italicGreen">Crafting Red. (%)</label>
+          <input type="text" placeholder="0" id="craftingReduction">
+          <!--Total Craft Cost-->
+          <label id="totalCraftCost">Total crafting cost: </label><br>
+
+          <!--Auction House-->
+          <h5 class="boldUnderline">Auction House</h5>
+          <!--Sale Price-->
+          <img src="Assets\Ingredients\Blank.png">
+          <label class="myLabel">Sale Price</label>
+          <input type="text" placeholder="0" id="salePrice" ><br>
+          <!--Amount Sold-->
+          <img src="Assets\Ingredients\Blank.png">
+          <label class="myLabel">Amount</label>
+          <label style="padding: 0 0 0 .4rem;" >3</label>
+
+          <!--Total Profit-->
+          <h5 class="boldUnderline">Total Profit</h5>
+          <img src="Assets\Ingredients\Blank.png">
+          <label id="farmedMats">Farmed mats: 0.00</label>
+          <button type="button" id="mybtn" onclick="calculate('Stimulant')">Calculate!</button><br>
+          <img src="Assets\Ingredients\Blank.png">
+          <label id="boughtMats">Bought mats: 0.00</label>
         </div>
       </div>
 

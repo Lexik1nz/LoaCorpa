@@ -170,6 +170,12 @@ label {
     margin: .25rem;
 }
 
+.labelDisabled {
+    color: var(--bs-gray-900);
+}
+
+
+
 input[type=text]{
     vertical-align: middle;
     border: var(--bs-gray-900) solid 2px;
@@ -296,6 +302,10 @@ input {
     border-style: solid;
 }
 
+input:disabled {
+    background: var(--bs-gray-800);
+}
+
 .column {
     margin: 0 auto;
     float: left;
@@ -326,7 +336,6 @@ input {
 }
 
 .flex-container > div {
-    /* background-color: var(--bs-gray-300); */
     margin: 1rem;
     padding: .5rem;
     font-size: 1rem;
@@ -359,3 +368,16 @@ input {
     font-style: italic;
     color: var(--bs-success);
 }
+
+.text-success {
+    color: var(--bs-success);
+}
+
+.text-danger {
+    color: var(--bs-danger);
+}
+
+.text-warning {
+    color: var(--bs-warning);
+}
+

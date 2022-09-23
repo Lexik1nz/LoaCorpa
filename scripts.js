@@ -14,8 +14,6 @@ function calculate(item){
                        document.getElementById('ing5').value]
     for (let x = 0; x < index; x++){
         totalMatCost += (ingredients[x]/ingredientBundleAmount[x]) * ingredientAmount[x]
-        console.log('Index ' + x + ', Ingredient cost ' + ingredients[x] + ', Total mat cost ' + totalMatCost)
-        console.log('Crafting percent ' + craftingPercent + ', Crafting cost ' + craftingCost)
     }
 
     let totalCraftCost = (totalMatCost + craftingCost).toFixed(2)

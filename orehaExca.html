@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <script src="scripts.js"></script>
+    <script src="recipeDictionary.js"></script>
     <div class="header">
       <img src="Assets\Logo\LoaCorpa-logos_white-skinny.png" />
     </div>
@@ -47,8 +49,58 @@
       </div>
 
       <div class="column middle">
-        <div class="wrapper">
-          Oreha Exca
+        <div class="wrapperBody">
+          <!--Item Header-->
+          <h5 class="boldUnderline">Oreha Fusion (x30)</h5>
+          <!--Ingredient 1-->
+          <img class="itemImage" src="Assets\Ingredients\OrehaRelic.png">
+          <label class="myLabel">Oreha Relic</label>
+          <input type="text" placeholder="0" id="ing1">
+          <!--Total Mat Cost-->
+          <label id="totalMatCost">Total material cost: </label><br>
+          <!--Ingredient 2-->
+          <img class="itemImage" src="Assets\Ingredients\RareRelic.png">
+          <label>Rare Relic</label>
+          <input type="text" placeholder="0" id="ing2">
+          <!--Crafting Cost-->
+          <label id="craftingCost" class="text-danger">Crafting cost: </label><br>
+          <!--Ingredient 3-->
+          <img class="itemImage" src="Assets\Ingredients\AncientRelic.png">
+          <label>Ancient Relic</label>
+          <input type="text" placeholder="0" id="ing3"><br>
+          <!--Ingredient 4 Placeholder-->
+          <img class="itemImage" src="Assets\Ingredients\Blank.png">
+          <label class="labelDisabled">Ingredient 4</label>
+          <input type="text" placeholder="0" id="ing4" disabled><br>
+          <!--Ingredient 5 Placeholder-->
+          <img class="itemImage" src="Assets\Ingredients\Blank.png">
+          <label class="labelDisabled">Ingredient 5</label>
+          <input type="text" placeholder="0" id="ing5" disabled><br>
+          <!--Crafting Reduction-->
+          <img class="itemImage" src="Assets\Ingredients\Blank.png">
+          <label class="italicGreen">Crafting Red. (%)</label>
+          <input type="text" placeholder="0" id="craftingReduction">
+          <!--Total Craft Cost-->
+          <label id="totalCraftCost">Total crafting cost: </label><br>
+
+          <!--Auction House-->
+          <h5 class="boldUnderline">Auction House</h5>
+          <!--Sale Price-->
+          <img src="Assets\Ingredients\Blank.png">
+          <label class="myLabel">Sale Price</label>
+          <input type="text" placeholder="0" id="salePrice" ><br>
+          <!--Amount Sold-->
+          <img src="Assets\Ingredients\Blank.png">
+          <label class="myLabel">Amount</label>
+          <label style="padding: 0 0 0 .4rem;" >30</label>
+
+          <!--Total Profit-->
+          <h5 class="boldUnderline">Total Profit</h5>
+          <img src="Assets\Ingredients\Blank.png">
+          <label id="farmedMats">Farmed mats: 0.00</label>
+          <button type="button" id="mybtn" onclick="calculate('Basic Oreha (Excavating)')">Calculate!</button><br>
+          <img src="Assets\Ingredients\Blank.png">
+          <label id="boughtMats">Bought mats: 0.00</label>
         </div>
       </div>
 
