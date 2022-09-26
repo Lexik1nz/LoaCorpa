@@ -1,12 +1,12 @@
 var fullDict = {
     'Items':
-        {'Atrophine':
+        {'atropine':
             {'ingredients': ['Shy Wild Flower', 'Bright Wild Flower', 'Wild Flower', 'Strong Irong Ore', 'Rare Relic'],
             'ingredAmount': [24, 6, 48, 2, 2],
             'ingredBundleAmount': [10, 10, 100, 10, 10],
             'craftingCost': 30,
             'amountCrafted': 3,
-            'name': 'Atrophine'
+            'name': 'atropine'
             },
         'Dark Grenade':
             {'ingredients': ['Exquisite Mushroom', 'Fresh Mushroom', 'Tender Timber', 'Crude Mushroom'],
@@ -22,7 +22,7 @@ var fullDict = {
             'ingredBundleAmount': [10, 10, 10, 100],
             'craftingCost': 15,
             'amountCrafted': 3,
-            'name': 'Atrophine',
+            'name': 'atropine',
             'name': 'Corrosive Bomb'
             },
         'Stimulant':
