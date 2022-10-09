@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loa Corpa</title>
+    <link rel="stylesheet" href="custom.css" />
+    <link rel="icon" href="Assets\Corpa.png" />
+  </head>
+
+  <body>
+    <script src="scripts.js"></script>
+    <script src="recipeDictionary.js"></script>
+    <div class="header">
+      <img src="Assets\Logo\LoaCorpa-logos_white-skinny.png" />
+    </div>
+
+    <div class="topnav">
+      <div class="topnavWrapper">
+        <div class="topnav brand">LoaCorpa</div>
+        <a href="index.html">Home</a>
+        <!--Battle Item Dropdown-->
+        <div class="dropdown">
+          <button class="dropbtn">Battle Items</button>
+          <div class="dropdown-content">
+            <a class="active" href="atropine.html">Atropine</a>
+            <a href="stimulant.html">Stimulant</a>
+          </div>
+        </div>
+        <!--Oreha Fusion Dropdown-->
+        <div class="dropdown">
+          <button class="dropbtn">Oreha Fusion</button>
+          <div class="dropdown-content">
+            <a href="orehaExca.html">Oreha Fusion (excavating)</a>
+            <a href="orehaFishing.html">Oreha Fusion (fishing)</a>
+            <a href="orehaHunting.html">Oreha Fusion (hunting)</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <!--Help Button-->
+        <a href="#" class="split">Help</a>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="column side">
+        <img class="myImg" src="Assets\Art\deathblade.jpg" />
+      </div>
+
+      <div class="column middle">
+        <div class="wrapperBody">
+        <!--Auction Header-->
+          <h5 class="boldUnderline">Auction</h5>
+          <label>Market price:</label>
+          <Input type="text" placeholder="0" id="marketPrice"><br>
+          <label>Bid price:</label>
+          <Input type="text" placeholder="0" id="bidPrice"><br>
+          <label>Market tax:</label>
+          <label id="ahTax" class="dangerLabel">0</label>
+          <hr>
+          <!--Bid Share-->
+          <h5 class="boldUnderline">Bid Share</h5>
+          <label>4 person bid share:</label>
+          <label id="fourPersonBidValue" class="warningLabel">0</label><br>
+          <label>8 person bid share:</label>
+          <label id="eightPersonBidValue" class="warningLabel">0</label><br>
+          <!--Profit-->
+          <h5 class="boldUnderline">Profit</h5>
+          <label>80% recommended bid price:</label>
+          <label id="recommendedBid">0</label><br>
+          <label>Total profit:</label>
+          <label>0</label><br>
+          <button class="button" onclick="auctionProfit()">Test</button><br>
+        </div>
+      </div>
+
+      <div class="column side">
+        <img class="myImg" src="Assets\Art\Scrapper.jpg"/>
+      </div>
+    </div>
+    <div class="footer">Testing</div>
+  </body>
+</html>

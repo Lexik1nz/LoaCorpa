@@ -20,6 +20,7 @@
       <div class="topnavWrapper">
         <div class="topnav brand">LoaCorpa</div>
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <!--Battle Item Dropdown-->
         <div class="dropdown">
           <button class="dropbtn">Battle Items</button>
@@ -37,7 +38,7 @@
             <a href="orehaHunting.html">Oreha Fusion (hunting)</a>
           </div>
         </div>
-        <a href="about.html">About</a>
+        
         <!--Help Button-->
         <a href="#" class="split">Help</a>
       </div>
@@ -51,7 +52,7 @@
       <div class="column middle">
         <div class="wrapperBody">
           <!--Item Header-->
-          <h5 class="boldUnderline">atropines (x3)</h5>
+          <h5 class="boldUnderline">Atropines (x3)</h5>
           <!--Ingredient 1-->
           <img class="itemImage" src="Assets\Ingredients\ShyFlower.png">
           <label class="myLabel">Shy Wild Flower</label>
@@ -98,16 +99,40 @@
           <h5 class="boldUnderline">Total Profit</h5>
           <img src="Assets\Ingredients\Blank.png">
           <label id="farmedMats">Farmed mats: 0.00</label>
-          <button type="button" id="mybtn" onclick="calculate('atropine')" class="button">Calculate!</button><br>
+          <button type="button" id="mybtn" onclick="calculate('Atropine')" class="button">Calculate!</button><br>
           <img src="Assets\Ingredients\Blank.png">
           <label id="boughtMats">Bought mats: 0.00</label>
         </div>
       </div>
 
+      <div class="column region">
+        <div class="wrapperBody">
+          <h5>Select region:</h5>
+          <button class="regionButtons" id="NAE" onclick="getPrice('North%20America%20East?', 'Atropine', 'NAE')">NAE</button>
+          <button class="regionButtons" id="NAW" onclick="getPrice('North%20America%20West?', 'Atropine', 'NAW')">NAW</button>
+          <button class="regionButtons" id="EUC" onclick="getPrice('Europe%20Central?', 'Atropine', 'EUC')">EUC</button>
+          <button class="regionButtons" id="EUW" onclick="getPrice('Europe%20West?', 'Atropine', 'EUW')">EUW</button>
+          <button class="regionButtons" id="SA" onclick="getPrice('South%20America?', 'Atropine','SA')">SA</button>
+          
+          <p>These values are gathered from 
+            <a href="https://www.lostarkmarket.online/north-america-east/market/enhancement-material">
+            Lost Ark Market Online.</a>  These values can be behind a couple hours or more as 
+            it is community driven, however they should still give a good ballpark as to how profitable an item is.
+          </p>
+          
+        </div>
+      </div>
+
+
       <div class="column side">
         <img class="myImg" src="Assets\Art\Scrapper.jpg" />
       </div>
+
+      
+
     </div>
-    <div class="footer">Testing</div>
+    <div class="footer">© 2022 Copyright Lost Ark Corpa. Lost Ark Corpa isn't endorsed by Amazon Games or 
+      Smilegate and <br> doesn't reflect the views or opinions of Amazon Games, Smilegate or anyone 
+      officially involved in producing or managing Lost Ark. </div>
   </body>
 </html>
